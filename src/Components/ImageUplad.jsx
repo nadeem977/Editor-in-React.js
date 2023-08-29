@@ -27,6 +27,8 @@ const ImageUplad = () => {
             lockScalingY: false,
             lockRotation: false,
             id,
+            selection:true,
+            draggable:true
           });
           applyDefaultStyles(fabricImg);
           setimagespass((prevImages) => [...prevImages, fabricImg]);
@@ -44,9 +46,9 @@ const ImageUplad = () => {
 
   return (
     <>
-      <Button variant="contained">
-        <label htmlFor="imageInput">Upload Image</label>
-      </Button>
+        <label htmlFor="imageInput" className="lableup">
+      Upload Image
+        </label>
       <input
         type="file"
         accept="image/*"
@@ -54,6 +56,7 @@ const ImageUplad = () => {
         style={{ display: "none" }}
         onChange={onImageUpload}
       />
+    
     </>
   );
 };

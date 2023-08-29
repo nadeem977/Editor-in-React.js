@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Bebas+Neue&family=Borel&family=Dancing+Script&family=Gluten&family=Handjet&family=Josefin+Sans&family=Lisu+Bosa&family=Noto+Sans+Indic+Siyaq+Numbers&family=Orbitron&family=Poppins:wght@400;600&family=Sedgwick+Ave+Display&family=Tilt+Prism&family=Ubuntu&display=swap');
+
 .main-div {
-  margin-top: 1rem;
   height: 100%;
   display: flex;
   gap: 20px;
   justify-content: space-between;
 }
 body {
-  /* background:#1c1e2b; */
+  font-family: Poppins;
+  font-weight: 400;
   background-color: #d5d5d5;
 }
 .Edit-main-div {
@@ -15,14 +17,11 @@ body {
   width: 270px;
   flex-direction: column;
   border-radius: 5px;
-
   gap: 10px;
   height: 100%;
   padding: 10px;
   background-color: #f2f9ea;
   overflow-y: scroll;
-  min-height:  85vh;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .imageset {
   width: 100%;
@@ -30,25 +29,31 @@ body {
   user-select: none;
 }
 .imag-div {
-  width: 199px;
+  width:200px;
   padding: 10px;
   border-radius: 5px;
   gap: 10px;
   background-color: #f2f9ea;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow-y: scroll;
-  height: 85vh;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
 
+}
+.canvas-div{
+  position: fixed;
+  top:30px;
+  left:35%;
+}
 #canvas{
   width:600px;
-  height:600px;
+  height:800px;
   border: 2px solid #f2f9ea;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.canvas-container{
+  height:600px;
 }
 .image-container {
   padding: 10px;
@@ -115,4 +120,105 @@ outline: none;
 border-radius: 8px;
 min-height: 100px;
 margin: auto;
+}
+
+.sidebars{
+  display:flex;
+  align-items: center;
+  padding: 40px 10px;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+
+}
+.textBox {
+  width: 300px;
+}
+.textBox button{
+width: 100%;
+}
+.textBox textarea{
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  padding: 5px;
+}
+canvas {
+  cursor: default; 
+}
+.canvas-container {
+  z-index:1000;
+}
+
+
+
+
+
+#colorPicker {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 19%, rgba(0,212,255,1) 100%); 
+   width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+#colorPickerback{
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+   padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer; 
+  width: 100%;
+}
+#colorPickertextback{
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer; 
+  width: 100%;
+}
+#canvasPickerback{
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer; 
+  width: 100%; 
+  padding: 10px;
+}
+.fontfamily{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: rebeccapurple;
+  border-radius: 5px;
+  color: white;
+  outline: none;
+}
+.fontfamily option{
+  color:white;
+}
+.todiv{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.canvas-objects-data{
+  padding: 10px;
+}
+.lableup{
+  width: 93%;
+  color: #fff;
+  background-color:#9c27b0;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+  padding: 6px 10px;
+  outline:none;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+cursor: pointer;
 }
